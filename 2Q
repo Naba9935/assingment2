@@ -1,0 +1,27 @@
+def stats(filename):
+    try:
+        # Open and read the file content at once
+        with open(filename, 'r') as file:
+            content = file.read()
+
+        # Calculate the number of lines
+        num_lines = content.count('\n') + 1 if content else 0
+
+        # Calculate the number of words
+        num_words = len(content.split())
+
+        # Calculate the number of characters
+        num_chars = len(content)
+
+        # Print the results
+        print(f"Lines: {num_lines}")
+        print(f"Words: {num_words}")
+        print(f"Characters: {num_chars}")
+
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+stats("C:/Users/hp/PycharmProjects/pythonProject1/venv/bing.txt")

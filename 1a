@@ -1,0 +1,20 @@
+def loadBets(filename):
+    try:
+        # Open the file and read its contents
+        with open(filename, 'r') as file:
+            # Read the file contents and split by lines to create a list
+            bets_list = file.read().splitlines()
+        
+        # Return the list of bets
+        return bets_list
+
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+        return []
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return []
+
+# Example usage:
+# bets = loadBets("bets.txt")
+# print(bets)

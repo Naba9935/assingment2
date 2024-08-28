@@ -1,0 +1,22 @@
+def calculateWinnings(bet, wager):
+    # Define odds based on the bet value
+    if bet == 2:
+        odds = 2
+    elif bet == 4:
+        odds = 3
+    elif bet == 6:
+        odds = 5
+    elif bet == 8:
+        odds = 7
+    elif bet == 10:
+        odds = 10
+    elif bet == 12:
+        odds = 15
+    else:
+        odds = 0  # No winnings if the bet doesn't match any predefined odds
+
+    # Calculate winnings
+    winnings = wager * odds
+    
+    # Return the calculated winnings
+    return winnings

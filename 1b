@@ -1,0 +1,9 @@
+import random
+
+def getRollValue():
+    die1 = random.randint(1, 6)
+    die2 = random.randint(1, 6)
+    
+    total_roll_value = die1 + die2
+    
+    return total_roll_value
